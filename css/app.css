@@ -1,3 +1,8 @@
+body {
+	font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #666;
+}
+
 .cover h1 {
 	font-family: 'Allura', cursive;
 	font-size: 70px;
@@ -11,7 +16,7 @@
   	text-transform: uppercase;
   	text-align: center;
   	letter-spacing: 5px;
-  	font-family: 'Pathway Gothic One', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  	font-family: 'Pathway Gothic One';
 }
 
 .navbar-center {
@@ -24,5 +29,37 @@
 	text-transform: uppercase;
 	color: #777;
 	font-size: 20px;
-	font-family: "Pathway Gothic One","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Pathway Gothic One";
+}
+
+.container-body {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 55px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1170px;
+	display: block;
+}
+
+.intro p {
+	font-family: "Glegoo", Helvetica;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	margin: 0px 0px 10px;
+}
+
+.col-md-offset-1 {
+	margin-left:8.3333333333%
+}
+
+#stories {
+	padding-top: 50px;
+}
+
+.section-divisor {
+	background-image: url("/imgs/title-bg.png");
+	height: 65px;
+	margin-bottom: 25px;
 }
