@@ -174,3 +174,17 @@ body {
     text-align: left;
     background-color: #37C6C1;
 }
+
+.couple-story {
+	margin-top: 50px;
+}
+
+.couple-story p, .couple-story span {
+    font-family: "Glegoo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.text-center {
+    text-align: center;
+}
