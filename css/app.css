@@ -1,6 +1,12 @@
 body {
 	font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #666;
+	background-color: #F8F8F8;
+	position: relative;
+}
+
+.clear {
+    clear: both;
 }
 
 .cover h1 {
@@ -62,4 +68,109 @@ body {
 	background-image: url("/imgs/title-bg.png");
 	height: 65px;
 	margin-bottom: 25px;
+}
+
+.ribbon-title {
+    display: table;
+    margin: 0px auto;
+    position: relative;
+    vertical-align: middle;
+}
+
+.ribbon-title h3 {
+    background-image: url("/imgs/ribbon_center.png");
+    margin: 0px auto;
+    height: 75px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 20px;
+    color: #FFF;
+    font-size: 40px;
+    text-shadow: 0.5px -1px 0px #000;
+}
+
+.ribbon-title h3:after,.ribbon-title h3:before{
+	background-repeat:no-repeat;
+	content:"";
+	height:75px;
+	width:55px;
+	display:inline-block;
+	background-size:contain;
+	position:absolute;
+	top:0
+}
+
+.ribbon-title h3:after{
+	background-image:url("/imgs/ribbon_right.png");
+	right:-55px
+}
+
+.ribbon-title h3:before{
+	background-image:url("/imgs/ribbon_left.png");
+	left:-40px
+}
+
+.pathway-font {
+    font-family: "Pathway Gothic One";
+}
+
+.couple-photos img {
+    border-radius: 100%;
+    box-shadow: 0px 0px 0px 0.5em #FFF;
+}
+
+.fiancee .couple-photos img {
+    float: right;
+}
+
+.col-xs-6 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.fiancee .couple-info {
+    position: absolute;
+    right: 230px;
+    top: 80px;
+}
+
+.fiance .couple-info {
+    position: absolute;
+    left: 230px;
+    top: 80px;
+}
+
+.fiancee .couple-info h3 {
+    text-align: right;
+    font-family: "Glegoo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 10px;
+    background-color: #FFF;
+    font-size: 20px;
+    color: #000;
+    line-height: 1;
+}
+
+.fiancee .couple-info h2 {
+    color: #FFF;
+    padding: 10px;
+    font-size: 30px;
+    text-align: right;
+    background-color: #F47D53;
+}
+
+.fiance .couple-info h3 {
+    text-align: left;
+    font-family: "Glegoo","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 10px;
+    background-color: #FFF;
+    font-size: 20px;
+    color: #000;
+}
+
+.fiance .couple-info h2 {
+    color: #FFF;
+    padding: 10px;
+    font-size: 30px;
+    text-align: left;
+    background-color: #37C6C1;
 }
