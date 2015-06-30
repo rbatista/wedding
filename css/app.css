@@ -142,16 +142,28 @@ body {
 	padding-right: 0px;
 }
 
-.fiancee .couple-info {
-    position: absolute;
-    right: 230px;
-    top: 80px;
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    .fiancee .couple-info {
+        position: absolute;
+        right: 210px;
+        top: 80px;
+    }
+
+    .fiance .couple-info {
+        position: absolute;
+        left: 210px;
+        top: 80px;
+    }
 }
 
-.fiance .couple-info {
-    position: absolute;
-    left: 230px;
-    top: 80px;
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    .fiance .couple-info {
+        float: right;
+    }
 }
 
 .fiancee .couple-info h3 {
