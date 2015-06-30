@@ -38,6 +38,11 @@ body {
 	font-family: "Pathway Gothic One";
 }
 
+#about {
+    margin-top: 55px;
+    margin-bottom: 44px;
+}
+
 .container-body {
 	padding-left: 15px;
 	padding-right: 15px;
