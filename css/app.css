@@ -64,8 +64,8 @@ body {
 	margin-left:8.3333333333%
 }
 
-#stories {
-	padding-top: 50px;
+.title {
+    padding-top: 50px;
 }
 
 .section-divisor {
@@ -202,7 +202,7 @@ and (max-width : 320px) {
 }
 
 .couple-story {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .couple-story p, .couple-story span {
@@ -213,4 +213,41 @@ and (max-width : 320px) {
 
 .text-center {
     text-align: center;
+}
+
+.event {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1px 1px 0 rgba(204,204,204,0.2);
+  margin-bottom: 20px;
+}
+
+.event .description, .event .details {
+  padding: 30px;
+}
+
+.event h2 {
+  font-size: 32px;
+}
+
+.event h2, .event h3 {
+  color: black;
+  font-weight: 600;
+  font-family: "Pathway Gothic One";
+  text-transform: uppercase;
+}
+
+.event p, .event span {
+  color: #666666;
+  font-family: "Glegoo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.event-map {
+    text-align: right;
+}
+
+.event-map img {
+    display: inline;
 }
