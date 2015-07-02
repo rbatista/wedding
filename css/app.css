@@ -296,6 +296,10 @@ and (max-width : 320px) {
     min-height: 15px;
 }
 
+.rsvp-body {
+    padding: 15px;
+}
+
 #rsvp-modal .modal-dialog .modal-content .rsvp-body .form-group input {
   width: 100%;
   height: 60px;
