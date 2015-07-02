@@ -228,7 +228,16 @@ and (max-width : 320px) {
 }
 
 .event .description, .event .details {
-  padding: 30px;
+  padding: 15px;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 767px) {
+
+    .event .description, .event .details {
+        padding: 0px;
+    }
 }
 
 .event h2 {
@@ -236,6 +245,7 @@ and (max-width : 320px) {
 }
 
 .event h2, .event h3 {
+  margin-top: 0px;
   color: black;
   font-weight: 600;
   font-family: "Pathway Gothic One";
