@@ -292,6 +292,10 @@ and (max-width : 320px) {
     border: none;
 }
 
+.rsvp-close-btn {
+    min-height: 15px;
+}
+
 #rsvp-modal .modal-dialog .modal-content .rsvp-body .form-group input {
   width: 100%;
   height: 60px;
