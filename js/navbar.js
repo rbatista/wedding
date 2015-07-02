@@ -3,5 +3,10 @@ $( document ).ready(function() {
 	      offset: {
 	        top: $('#myCarousel').height()
 	      }
-	}); 
-});	
+	});
+
+	$('nav ul li a').click(function() {
+		$('#navigationbar').collapse('hide');
+	});
+
+});
