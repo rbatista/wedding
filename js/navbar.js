@@ -9,4 +9,9 @@ $( document ).ready(function() {
 		$('#navigationbar').collapse('hide');
 	});
 
+
+	$('body').scrollspy({ 
+		target: 'nav' 
+	});
+
 });
