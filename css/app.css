@@ -25,10 +25,32 @@ body {
   	font-family: 'Pathway Gothic One';
 }
 
-.navbar-center {
-    float: none;
-    margin: 0px auto;
-    display: table;
+.carousel-caption {
+    padding-bottom: 0px;
+}
+
+@media only screen 
+and (max-width: 767px) {
+    .cover h1 {
+        font-size: 38px;
+    }
+
+    .cover p {
+        font-size: 20px;
+    }
+
+/*    .carousel, .carousel .item, .carousel .item img {
+        height: 170px;
+    }*/
+}
+
+@media only screen 
+and (min-width : 480px) {
+    .navbar-center {
+        float: none;
+        margin: 0px auto;
+        display: table;
+    }
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -36,6 +58,11 @@ body {
 	color: #777;
 	font-size: 20px;
 	font-family: "Pathway Gothic One";
+}
+
+.affix {
+    top: 0;
+    width: 100%;
 }
 
 #about {
