@@ -363,3 +363,12 @@ and (max-width : 767px) {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+#countdown {
+  background-color: #db8867;
+  min-height: 174px;
+  padding: 53px 0;
+  color: white;
+  font-size: 50px;
+  line-height: 1;
+}

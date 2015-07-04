@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html ng-app="weddingApp" lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,11 +22,13 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="countdown.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -362,6 +364,29 @@
     </div>
 
 
+    <!-- WISH LIST
+    ================================================== -->
+    <div id="wish-list" class="title">
+      <header class="section-divisor">
+            <div class="ribbon-title">
+                <h3 class="pathway-font">LISTA DE PRESENTES</h3>
+            </div>
+      </header>
+    </div>
+
+    <div id="countdown" ng-controller="CountdownController as countdown">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+              <div class="pathway-font text-center">
+                <p class="pathway-font hidden-xs uppercase">Faltam apenas <strong class="playfair-font">{{countdown.getRemainingDays()}}</strong> dias para o grande dia.</p>
+                <p class="pathway-font visible-xs uppercase">Faltam apenas<br> <strong class="playfair-font">{{countdown.getRemainingDays()}}</strong><br> dias para o grande dia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <script type="text/javascript">
       $('.phone_with_ddd').mask('(00) 00000-0000');
