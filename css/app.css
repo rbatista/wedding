@@ -375,6 +375,8 @@ and (max-width : 767px) {
 
 .wish-item h3, .wish-item h2 {
     color: #000000;
+    font-weight: 600;
+    font-family: "Pathway Gothic One";
     /*margin-top: 0px;*/
     /*margin-bottom: 0px;*/
 }
