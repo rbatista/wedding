@@ -364,6 +364,28 @@ and (max-width : 767px) {
     margin-bottom: 5px;
 }
 
+.wish-item {
+    margin-bottom: 30px;
+}
+
+.wish-item a {
+    text-decoration: none;
+    color: #666;
+}
+
+.wish-item h3, .wish-item h2 {
+    color: #000000;
+    /*margin-top: 0px;*/
+    /*margin-bottom: 0px;*/
+}
+
+.wish-item p, .wish-item span {
+  font-family: "Glegoo";
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+}
+
 #countdown {
   background-color: #db8867;
   min-height: 174px;
@@ -371,4 +393,12 @@ and (max-width : 767px) {
   color: white;
   font-size: 50px;
   line-height: 1;
+}
+
+#countdown {
+    margin-top: 50px;
+}
+
+#countdown p {
+    margin: 0px;
 }
