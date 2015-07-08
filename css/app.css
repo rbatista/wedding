@@ -29,7 +29,7 @@ body {
     padding-bottom: 0px;
 }
 
-@media only screen 
+@media only screen
 and (max-width: 767px) {
     .cover h1 {
         font-size: 38px;
@@ -44,7 +44,7 @@ and (max-width: 767px) {
     }*/
 }
 
-@media only screen 
+@media only screen
 and (min-width : 480px) {
     .navbar-center {
         float: none;
@@ -121,7 +121,7 @@ and (min-width : 480px) {
     text-shadow: 0.5px -1px 0px #000;
 }
 
-@media only screen 
+@media only screen
 and (max-width: 767px) {
     .ribbon-title h3 {
       font-size: 32px;
@@ -178,7 +178,7 @@ and (max-width: 767px) {
 }
 
 /* Desktops and laptops ----------- */
-@media only screen 
+@media only screen
 and (min-width : 1224px) {
     .fiancee .couple-info {
         position: absolute;
@@ -194,7 +194,7 @@ and (min-width : 1224px) {
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
+@media only screen
 and (max-width : 320px) {
     .fiance .couple-info {
         float: right;
@@ -237,7 +237,7 @@ and (max-width : 320px) {
 }
 
 .couple-story {
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 .couple-story p, .couple-story span {
@@ -259,7 +259,7 @@ and (max-width : 320px) {
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
+@media only screen
 and (max-width : 767px) {
 
     .event .description, .event .details {
@@ -347,7 +347,7 @@ and (max-width : 767px) {
 }
 
 .btn-lg {
-   font-size: 27px;   
+   font-size: 27px;
 }
 
 .form-option {

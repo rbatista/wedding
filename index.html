@@ -29,8 +29,8 @@
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/navbar.js"></script>
     <script src="app.module.js"></script>
-    <script src="countdown.js"></script>
-    <script src="guestconfirmation.js"></script>
+    <script src="countdown.controller.js"></script>
+    <script src="guestconfirmation.controller.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -67,34 +67,7 @@
             </div>
           
         </div>
-        <!--
-        <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-            <div class="carousel-caption">
-              <h1 class="names">Mairis &amp; Raphael</h1>
-              <p>10 de Outubro de 2015</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="carousel-caption">
-            <h1 class="names">Mairis &amp; Raphael</h1>
-            <p>10 de Outubro de 2015</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-          </div>
-        </div> -->
       </div>
-
-
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div><!-- /.carousel -->
 
 
@@ -123,7 +96,7 @@
             <li><a href="#guest-confirmation">Confirmar Presen&ccedil;a</a></li>
             <li><a href="#">&Aacute;lbuns</a></li>
             <li><a href="#">Mensagens</a></li>
-            <li><a href="#">Lista de presentes</a></li>
+            <li><a href="#wish-list">Lista de presentes</a></li>
             <li><a href="#">Dicas</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -321,21 +294,21 @@
                               <label>
                                 <h1 class="pathway-font">NOME</h1>
                               </label>  
-                              <input class="form-control" id="name" name="name" placeholder="Nome igual consta no convite" required type="text" ng-model="guest.name">
+                              <input class="form-control" id="name" name="name" placeholder="Nome igual consta no convite" required type="text" ng-model="guestConfirmation.name">
                             </div>
 
                             <div class="form-group col-md-4 col-sm-12 text-left">
                               <label>
                                 <h1 class="pathway-font">E-MAIL</h1>
                               </label>  
-                              <input class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" type="email" ng-model="guest.email">
+                              <input class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" type="email" ng-model="guestConfirmation.email">
                             </div>
 
                             <div class="form-group col-md-4 col-sm-12 text-left">
                               <label>
                                 <h1 class="pathway-font">TELEFONE</h1>
                               </label>  
-                              <input class="form-control phone_with_ddd" id="phone" name="phone" placeholder="Somente números" required type="tel" ng-model="guest.phone">
+                              <input class="form-control phone_with_ddd" id="phone" name="phone" placeholder="Somente números" required type="tel" ng-model="guestConfirmation.phone">
                             </div>
                         </div> <!-- form-inline -->
 
@@ -346,11 +319,9 @@
                   <div class="rsvp-btns row">
                     <div class="form-option text-center">
 
-                      <div class="col-md-4"><input class="btn btn-info btn-lg btn-block pathway-font btn-margin-v" name="confirm" type="submit" value="CONFIRMAR" ng-click="guestConfirmation.confirm(guest)"></div>
+                      <div class="col-md-4"><input class="btn btn-info btn-lg btn-block pathway-font btn-margin-v" name="confirm" type="submit" value="CONFIRMAR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(true)"></div>
 
-                      <div class="col-md-4"><input class="btn btn-warning btn-lg btn-block pathway-font btn-margin-v" name="maybe" type="submit" value="AINDA NÃO SEI" ng-click="guestConfirmation.maybe(guest)"></div>
-
-                      <div class="col-md-4"><input class="btn btn-danger btn-lg btn-block pathway-font btn-margin-v" name="decline" type="submit" value="NÃO PODEREI IR" ng-click="guestConfirmation.reject(guest)"></div>                      
+                      <div class="col-md-4"><input class="btn btn-danger btn-lg btn-block pathway-font btn-margin-v" name="decline" type="submit" value="NÃO PODEREI IR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(false)"></div>                      
 
                     </div> <!-- form-option -->
                   </div> <!-- row -->

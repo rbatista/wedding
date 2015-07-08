@@ -10,8 +10,8 @@ $( document ).ready(function() {
 	});
 
 
-	$('body').scrollspy({ 
-		target: 'nav' 
+	$('body').scrollspy({
+		target: 'nav'
 	});
 
 });
