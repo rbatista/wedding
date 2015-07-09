@@ -44,7 +44,7 @@
     <link href="css/app.css" rel="stylesheet">
   </head>
   <body>
-      
+
 
     <!-- Carousel
     ================================================== -->
@@ -60,12 +60,12 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide" src="imgs/first.jpg" alt="First slide">
-          
+
             <div class="carousel-caption">
               <h1 class="names">Mairis &amp; Raphael</h1>
               <p>10 de Outubro de 2015</p>
             </div>
-          
+
         </div>
       </div>
     </div><!-- /.carousel -->
@@ -173,7 +173,7 @@
               <div class="col-md-2"></div>
             </div>
 
-   
+
             <div class="row clear couple-story">
               <div class="col-md-2"></div>
               <div class="col-md-8">
@@ -204,9 +204,9 @@
 
     <div class="row">
       <div class="col-md-2"></div>
-      
+
       <div class="col-md-8">
-        
+
         <div class="event white-box">
           <div class="row">
             <div class="col-md-4 col-xs-12 col-sm-4 no-hor-padding">
@@ -226,7 +226,7 @@
                 <p>Rua Lu&iacute;s Gama, 1848 - Jardim Arapua, Lins - SP.</p>
               </div>
             </div>
-            
+
             <div class="col-md-4 col-xs-12 col-sm-4 event-map no-hor-padding">
               <a href="https://www.google.com/maps/place/R.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472/" target="_blank">
                 <img class="img-responsive" src="http://maps.googleapis.com/maps/api/staticmap?center=R.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472&zoom=16&scale=1&size=340x320&maptype=roadmap&format=png&visual_refresh=true&markers=icon:http://mairiseraphael.com/imgs/pin_mapa.png%7Cshadow:true%7CR.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472" alt="Google Map of R. Luís Gama, 1848 - Jardim Arapua, Lins - SP, 16400-472">
@@ -265,7 +265,7 @@
 
                 <div class="modal-header">
                   <div class="container-fluid">
-                    
+
                     <div class="row">
                       <div class="col-md-12 text-right">
                         <div class="rsvp-close-btn">
@@ -288,26 +288,31 @@
                     <div class="col-md-12 no-hor-padding">
                       <div class="rsvp-body white-box">
 
+                        <div class="alert" ng-class="{ 'alert-success' : guestConfirmation.sucessAlert, 'alert-danger' : !guestConfirmation.sucessAlert }" ng-show="guestConfirmation.showAlert">
+                          <button type="button" class="close" data-ng-click="guestConfirmation.disableAlert()" >×</button>
+                          <strong>{{guestConfirmation.messageAlert}}</strong>
+                        </div>
+
                       <form id="rsvp-form" role="form" data-toggle="validator">
                         <div class="row">
                             <div class="form-group col-md-4 col-sm-12 text-left">
                               <label>
                                 <h1 class="pathway-font">NOME</h1>
-                              </label>  
+                              </label>
                               <input class="form-control" id="name" name="name" placeholder="Nome igual consta no convite" required type="text" ng-model="guestConfirmation.name">
                             </div>
 
                             <div class="form-group col-md-4 col-sm-12 text-left">
                               <label>
                                 <h1 class="pathway-font">E-MAIL</h1>
-                              </label>  
+                              </label>
                               <input class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" type="email" ng-model="guestConfirmation.email">
                             </div>
 
                             <div class="form-group col-md-4 col-sm-12 text-left">
                               <label>
                                 <h1 class="pathway-font">TELEFONE</h1>
-                              </label>  
+                              </label>
                               <input class="form-control phone_with_ddd" id="phone" name="phone" placeholder="Somente números" required type="tel" ng-model="guestConfirmation.phone">
                             </div>
                         </div> <!-- form-inline -->
@@ -321,7 +326,7 @@
 
                       <div class="col-md-4"><input class="btn btn-info btn-lg btn-block pathway-font btn-margin-v" name="confirm" type="submit" value="CONFIRMAR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(true)"></div>
 
-                      <div class="col-md-4"><input class="btn btn-danger btn-lg btn-block pathway-font btn-margin-v" name="decline" type="submit" value="NÃO PODEREI IR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(false)"></div>                      
+                      <div class="col-md-4"><input class="btn btn-danger btn-lg btn-block pathway-font btn-margin-v" name="decline" type="submit" value="NÃO PODEREI IR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(false)"></div>
 
                     </div> <!-- form-option -->
                   </div> <!-- row -->
@@ -397,7 +402,7 @@
             </div> <!-- row -->
           </div>
         </a>
-        
+
       </div>
       <div class="col-md-2"></div>
     </div>
