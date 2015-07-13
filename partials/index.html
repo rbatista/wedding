@@ -1,0 +1,309 @@
+<!-- Carousel
+    ================================================== -->
+    <div id="header" class="row">
+      <div class="col-md-12 no-hor-padding">
+        <div id="myCarousel" class="carousel slide cover" data-ride="carousel">
+          <!-- Indicators -->
+          <!--
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img class="first-slide" src="imgs/first.jpg" alt="First slide">
+
+                <div class="carousel-caption">
+                  <h1 class="names">Mairis &amp; Raphael</h1>
+                  <p>10 de Outubro de 2015</p>
+                </div>
+
+            </div>
+          </div>
+        </div><!-- /.carousel -->
+      </div>
+    </div>
+
+
+    <!-- NAVBAR
+================================================== -->
+
+    <nav class="navbar navbar-default navbar-static-top" ng-controller="NavigationController as navigationController">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigationbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse text-center" id="navigationbar">
+          <ul class="nav navbar-nav navbar-center">
+            <li ng-repeat="item in navigationController.itens track by $index" ng-class="{ 'active' : $index == navigationController.activeItem }">
+              <a href="#" ng-click="navigationController.goTo(item.link, $index)">{{ item.text }}</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="about" class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <article class="intro text-center white-box">
+          <p>Olá amigos e familiares! O dia mais especial de nossas vidas está chegando e gostaríamos muito, mas muito mesmo, de contar com a presença de todos vocês! Será um dia inesquecível, alegre e marcado para sempre!</p>
+        </article>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+    <div ng-include src="'partials/index.stories.html'"></div>
+
+     <!-- EVENTS
+    ================================================== -->
+
+    <div id="events" class="title">
+      <header class="section-divisor">
+            <div class="ribbon-title">
+                <h3 class="pathway-font">EVENTOS</h3>
+            </div>
+        </header>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
+
+        <div class="event white-box">
+          <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-4 no-hor-padding">
+              <div class="description">
+                <h2 class="uppercase pathway-font">Cerim&ocirc;nia e Festa</h2>
+                <p></p>
+                <p>O There Restaurante fica localizado na Rua Lu&iacute;s Gama, 1848 - Jardim Arapua na cidade de Lins - SP.</p>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-4 no-hor-padding">
+              <div class="details">
+                <h3>Quando</h3>
+                <p>S&aacute;bado, 10 de Outubro de 2015  &agrave;s 11h.</p>
+                <h3>Onde</h3>
+                <p>Rua Lu&iacute;s Gama, 1848 - Jardim Arapua, Lins - SP.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-4 event-map no-hor-padding">
+              <a href="https://www.google.com/maps/place/R.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472/" target="_blank">
+                <img class="img-responsive" src="http://maps.googleapis.com/maps/api/staticmap?center=R.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472&zoom=16&scale=1&size=340x320&maptype=roadmap&format=png&visual_refresh=true&markers=icon:http://mairiseraphael.com/imgs/pin_mapa.png%7Cshadow:true%7CR.+Luís+Gama,+1848+-+Jardim+Arapua,+Lins+-+SP,+16400-472" alt="Google Map of R. Luís Gama, 1848 - Jardim Arapua, Lins - SP, 16400-472">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+
+    <!-- GUEST CONFIRMATION
+    ================================================== -->
+
+    <div id="guest-confirmation" class="title">
+      <header class="section-divisor">
+            <div class="ribbon-title">
+                <h3 class="pathway-font">CONFIRMAR PRESEN&Ccedil;A</h3>
+            </div>
+      </header>
+    </div>
+
+    <div class="row" ng-controller="GuestConfirmationController as guestConfirmation">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div id="guest-confirmation-content" class="col-xs-12 text-center white-box">
+          <h4 class="glegoo-font">Sua presen&ccedil;a &eacute; muito importante para n&oacute;s!</h4>
+          <a id="rsvp-btn" class="btn btn-info pathway-font" data-toggle="modal" href="#rsvp-modal" role="button">RSVP</a>
+
+          <!-- modal -->
+          <div id="rsvp-modal" class="modal fade">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <div class="container-fluid">
+
+                    <div class="row">
+                      <div class="col-md-12 text-right">
+                        <div class="rsvp-close-btn">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                      </div>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-6">
+                        <h1 class="modal-title pathway-font">CONFIRMAR PRESEN&Ccedil;A<span> (RSVP)</span></h1>
+                        <p>Ol&aacute;, convidado. Confirme abaixo sua presen&ccedil;a.</p>
+                      </div>
+                      <div class="col-md-3"></div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12 no-hor-padding">
+                      <div class="rsvp-body white-box">
+
+                        <div class="alert" ng-class="{ 'alert-success' : guestConfirmation.sucessAlert, 'alert-danger' : !guestConfirmation.sucessAlert }" ng-show="guestConfirmation.showAlert">
+                          <button type="button" class="close" data-ng-click="guestConfirmation.disableAlert()" >×</button>
+                          <strong>{{guestConfirmation.messageAlert}}</strong>
+                        </div>
+
+                      <form id="rsvp-form" role="form" data-toggle="validator">
+                        <div class="row">
+                            <div class="form-group col-md-4 col-sm-12 text-left">
+                              <label>
+                                <h1 class="pathway-font">NOME</h1>
+                              </label>
+                              <input class="form-control" id="name" name="name" placeholder="Nome igual consta no convite" required type="text" ng-model="guestConfirmation.name">
+                            </div>
+
+                            <div class="form-group col-md-4 col-sm-12 text-left">
+                              <label>
+                                <h1 class="pathway-font">E-MAIL</h1>
+                              </label>
+                              <input class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" type="email" ng-model="guestConfirmation.email">
+                            </div>
+
+                            <div class="form-group col-md-4 col-sm-12 text-left">
+                              <label>
+                                <h1 class="pathway-font">TELEFONE</h1>
+                              </label>
+                              <input class="form-control phone_with_ddd" id="phone" name="phone" placeholder="Somente números" required type="tel" ng-model="guestConfirmation.phone">
+                            </div>
+                        </div> <!-- form-inline -->
+
+                      </div> <!-- rsvp-body -->
+                    </div> <!-- white-box -->
+                  </div> <!-- row -->
+
+                  <div class="rsvp-btns row">
+                    <div class="form-option text-center">
+
+                      <div class="col-md-4"><input class="btn btn-info btn-lg btn-block pathway-font btn-margin-v" name="confirm" type="submit" value="CONFIRMAR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(true)"></div>
+
+                      <div class="col-md-4"><input class="btn btn-danger btn-lg btn-block pathway-font btn-margin-v" name="decline" type="submit" value="NÃO PODEREI IR" ng-model="guestConfirmation.presence" ng-click="guestConfirmation.confirm(false)"></div>
+
+                    </div> <!-- form-option -->
+                  </div> <!-- row -->
+
+                  </form>
+                </div> <!-- modal-body -->
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+    <!-- WISH LIST
+    ================================================== -->
+    <div id="wish-list" class="title">
+      <header class="section-divisor">
+            <div class="ribbon-title">
+                <h3 class="pathway-font">LISTA DE PRESENTES</h3>
+            </div>
+      </header>
+    </div>
+
+    <div class="row wish-item">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+
+        <a href="https://carrinho.americanas.com.br/lista-de-casamento/pages/BridalRegistryHomePage/bridalRegistryId/01-02-11268880/#" target="_blank">
+          <div class="white-box">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="">
+                  <h2 class="pathway-font text-uppercase">Lista de presentes</h2>
+                  <span>www.americanas.com.br</span>
+                </div>
+              </div> <!-- col-md-4 -->
+              <div class="col-md-8">
+                <div class="description">
+                  <h3 class="pathway-font text-uppercase">Descri&ccedil;&atilde;o</h3>
+                  <p>Eletrodom&eacute;sticos, utens&iacute;lios de cozinha, prataria e tudo que precisamos para deixar nossa casa bem aconchegante para receber vocês.</p>
+                </div>
+              </div>
+            </div> <!-- row -->
+          </div>
+        </a>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <div class="row wish-item collapse">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+
+        <a href="#" target="_blank">
+          <div class="white-box">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="">
+                  <h2 class="pathway-font text-uppercase">Cotas de lua de mel</h2>
+                  <span></span>
+                </div>
+              </div> <!-- col-md-4 -->
+              <div class="col-md-8">
+                <div class="description">
+                  <h3 class="pathway-font text-uppercase">Descri&ccedil;&atilde;o</h3>
+                  <p>Ajude a tornar nossa viagem &agrave; Macei&oacute; ainda mais inesquec&iacute;vel com cotas de lua de mel.</p>
+                </div>
+              </div>
+            </div> <!-- row -->
+          </div>
+        </a>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+
+    <!-- COUNTDOWN
+    ================================================== -->
+    <div id="countdown" ng-controller="CountdownController as countdown">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+              <div class="pathway-font text-center">
+                <p class="pathway-font uppercase">Faltam apenas <strong class="playfair-font">{{countdown.getRemainingDays()}}</strong> dias para o grande dia.</p>
+                <!--<p class="pathway-font visible-xs uppercase">Faltam apenas<br> <strong class="playfair-font">{{countdown.getRemainingDays()}}</strong><br> dias para o grande dia.</p> -->
+              </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+
+  <!--  <script src="js/navbar.js"></script> -->
+    <script type="text/javascript">
+      $('.phone_with_ddd').mask('(00) 00000-0000');
+    </script>
