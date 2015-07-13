@@ -23,7 +23,6 @@
       { text: 'Dicas', link: '' },
     ];
 
-    vm.colapseMenu = colapseMenu;
     vm.goTo = goTo;
     vm.changeActiveMenu = changeActiveMenu;
 
@@ -31,21 +30,24 @@
 
     function activate() {
       $('nav').affix({
-              offset: {
-                top: $('#myCarousel').height()
-              }
-        });
+        offset: {
+          top: $('#myCarousel').height()
+        }
+      });
 
       $('body').scrollspy({
         target: 'nav'
       });
+
+      colapseMenu();
     }
 
-
     function colapseMenu() {
-      $('nav ul li a').click(function() {
-        $('#navigationbar').collapse('hide');
-      });
+      if ($('navbar-header button').attr('display') !== 'none') {
+        $('nav ul').on('click', 'a', function() {
+          $('#navigationbar').collapse('hide');
+        });
+      }
     }
 
     function goTo(element, index) {
@@ -55,9 +57,10 @@
 
       var currentTop = $(window).scrollTop()
       var elementTop = $("#" + element).offset().top;
-      var navHeight = $("#navigationbar").height();
+      var navHeight = $("nav").height()
+      var headHeight = $('#myCarousel').height();
 
-      if (currentTop < elementTop) {
+      if (currentTop < headHeight) {
         elementTop = elementTop - navHeight;
       }
 
