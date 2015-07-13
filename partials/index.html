@@ -46,7 +46,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse text-center" id="navigationbar">
           <ul class="nav navbar-nav navbar-center">
-            <li ng-repeat="item in navigationController.itens track by $index" ng-class="{ 'active' : $index == navigationController.activeItem }">
+            <li ng-repeat="item in navigationController.itens track by $index" ng-class="{ 'active' : $index == navigationController.activeItem, 'hidden' : !item.link }">
               <a href="#" ng-click="navigationController.goTo(item.link, $index)">{{ item.text }}</a>
             </li>
           </ul>

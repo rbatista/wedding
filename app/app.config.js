@@ -13,6 +13,10 @@
         url: "/",
         templateUrl: "partials/index.html"
       })
+      .state('admin', {
+        url: "/admin",
+        templateUrl: "partials/admin.html"
+      })
       ;
   };
 
