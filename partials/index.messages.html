@@ -1,0 +1,74 @@
+<div id="messages" class="title" ng-controller="MessageController as message">
+  <header class="section-divisor">
+    <div class="ribbon-title">
+      <h3 class="pathway-font">MENSAGENS AOS NOIVOS</h3>
+    </div>
+  </header>
+
+  <section class="container-body">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+
+          <div class="white-box">
+            <div class="row">
+              <div class="conteiner-fluid">
+                <div class="text-center">
+                  <input class="btn btn-info btn-lg pathway-font btn-margin-v ng-pristine ng-valid ng-touched" type="button" data-toggle="collapse" data-target="#collapseMessageForm" aria-expanded="false" value="Deixe sua mensagem">
+                </div>
+              </div>
+            </div>
+
+            <div id="collapseMessageForm" class="collapse">
+              <form>
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="form-group col-md-6 col-sm-12 text-left">
+                        <input class="form-control" id="msg-name" name="msg-name" placeholder="Nome" required type="text" ng-model="message.name">
+                      </div>
+
+                      <div class="form-group col-md-6 col-sm-12 text-left">
+                        <input class="form-control" id="msg-email" name="msg-email" placeholder="Email" type="email" ng-model="message.email">
+                      </div>
+
+                      <div class="form-group col-md-12 col-sm-12 text-left">
+                        <textarea class="form-control" id="msg-message" name="msg-message" placeholder="Digite sua mensagem" type="text" ng-model="message.message"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2"></div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+        <div class="col-md-2"></div>
+      </div>
+
+    </div>
+
+    <div class="row box-mg-top">
+      <div class="col-md-2"></div>
+      <div class="col-md-8" id="messages-conteiner">
+
+        <div class="msg-conteiner white-box" ng-repeat="msg in message.messages track by $index">
+          <div class="row">
+            <div class="col-md-3 col-xs-12">
+              <p class="msg-name pathway-font uppercase">{{msg.name}}</p>
+              <p class="msg-date">{{  msg.date | date: 'dd/MM/yyyy'}}</p>
+            </div>
+            <div class="col-md-9 col-xs-12">
+            <p class="guest-msg">{{msg.message}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </section>
+
+</div>

@@ -18,7 +18,7 @@
       { text: 'Eventos', link: 'events' },
       { text: 'Confirmar Presença', link: 'guest-confirmation' },
       { text: 'Álbuns', link: '' },
-      { text: 'Mensagens', link: '' },
+      { text: 'Mensagens', link: 'messages' },
       { text: 'Lista de presentes', link: 'wish-list' },
       { text: 'Dicas', link: '' },
     ];
