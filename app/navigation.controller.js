@@ -13,7 +13,7 @@
     vm._prevent = false;
     vm.activeItem = 0;
     vm.itens = [
-      { text: 'Sobre', link: 'myCarousel' },
+      { text: 'Sobre', link: 'header' },
       { text: 'História', link: 'stories' },
       { text: 'Eventos', link: 'events' },
       { text: 'Confirmar Presença', link: 'guest-confirmation' },
@@ -31,7 +31,7 @@
     function activate() {
       $('nav').affix({
         offset: {
-          top: $('#myCarousel').height()
+          top: $('#header').height()
         }
       });
 
@@ -58,7 +58,7 @@
       var currentTop = $(window).scrollTop()
       var elementTop = $("#" + element).offset().top;
       var navHeight = $("nav").height()
-      var headHeight = $('#myCarousel').height();
+      var headHeight = $('#header').height();
 
       if (currentTop < headHeight) {
         elementTop = elementTop - navHeight;
