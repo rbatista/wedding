@@ -359,7 +359,7 @@ and (max-width : 767px) {
     margin-right: -15px;
 }
 
-.rsvp-btns .form-option div {
+.rsvp-btns .form-option div, #collapseMessageForm .btn {
     margin-top: 5px;
     margin-bottom: 5px;
 }

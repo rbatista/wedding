@@ -8,7 +8,7 @@
   guestConfirmationController.$inject = ['$http'];
 
   function guestConfirmationController($http) {
-    var BASE_API_URL = '/api/v1/';
+    var API_URL = '/api/v1/guests';
     var vm = this;
 
     vm.showAlert = false;
@@ -33,7 +33,7 @@
 
       console.log(JSON.stringify(guest));
 
-      $http.post(BASE_API_URL + 'guests', guest)
+      $http.post(API_URL, guest)
         .success(confirmationSucess)
         .error(confirmationError);
     }
@@ -52,7 +52,7 @@
       console.log('error: ' + data);
 
       vm.sucessAlert = false;
-      vm.messageAlert = "Não foi possível confirmar sua presença, tente novamente mais tarde.";
+      vm.messageAlert = "Não foi possível confirmar sua presença, por favor, tente novamente mais tarde.";
       vm.showAlert = true;
     }
 
@@ -66,7 +66,8 @@
 
     function getFirstName(fullName) {
       if (fullName) {
-        return fullName.substr(0, fullName.indexOf(' '));
+        var index = fullName.indexOf(' ');
+        return index == -1 ? fullName: fullName.substr(0, index);
       }
 
       return "";
