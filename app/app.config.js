@@ -15,9 +15,16 @@
       })
       .state('admin', {
         url: "/admin",
-        templateUrl: "partials/admin.html"
+        templateUrl: "partials/admin.html",
       })
-      ;
+      .state('admin.guests', {
+        url: '/guests',
+        views: {
+          'adminContent' : {
+            templateUrl: "partials/admin.guests.html"
+          }
+        }
+      });
   };
 
 })();

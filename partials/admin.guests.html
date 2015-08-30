@@ -1,0 +1,36 @@
+<h2>Lista de convidados confirmados</h2>
+
+<div ng-controller="GuestsAdminController as guestController">
+
+<div class="row">
+<div class="col-md-10 col-xs-12">
+
+  <div class="painel painel-default">
+    <table class="table table-striped">
+      <thead>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Confirmado</th>
+        <th>Data de confirma&ccedil;&atilde;o</th>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="guest in guestController.guests track by $index">
+          <td scope="row">{{ guest.id }}</td>
+          <td>{{ guest.name }}</td>
+          <td>{{ guest.email }}</td>
+          <td>{{ guest.phone }}</td>
+          <td>{{ guest.confirmed ? 'Sim' : 'Não' }}</td>
+          <td>{{ guest.confirmed_date | date: 'dd/MM/yyyy HH:mm'}}</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+</div>
+</div> <!-- row -->
+
+</div>
