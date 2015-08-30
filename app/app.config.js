@@ -24,6 +24,14 @@
             templateUrl: "partials/admin.guests.html"
           }
         }
+      })
+      .state('admin.messages', {
+        url: '/messages',
+        views: {
+          'adminContent' : {
+            templateUrl: "partials/admin.messages.html"
+          }
+        }
       });
   };
 
