@@ -444,3 +444,17 @@ and (max-width : 767px) {
   font-size: 16px;
   line-height: 1.5;
 }
+
+.blackwhite {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+
+/*
+  filter: grayscale(100%); // General Grayscale support
+  -webkit-filter: grayscale(100%); //Webkit Browser Support
+  -moz-filter: grayscale(100%); // Mozilla Firefox Support
+  -ms-filter: grayscale(100%); // IE Support
+  -o-filter: grayscale(100%); // Opera Browser Support
+  */
